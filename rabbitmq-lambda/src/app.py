@@ -10,7 +10,7 @@ def lambda_handler(event, context):
         return {
             'statusCode': 404
         }
-    print(f'Div Data received from event source: ')
+    print('Div Data received from event source: ')
     for queue in event["rmqMessagesByQueue"]:
         messageCnt = len(event['rmqMessagesByQueue'][queue])
         print(f'Total messages received from event source: {messageCnt}' )
